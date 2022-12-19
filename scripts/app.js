@@ -1,6 +1,8 @@
 const form=document.querySelector('form');
 const detail=document.querySelector('.detay');
 const card=document.querySelector('.card');
+const timeImage=document.querySelector("img.zaman");
+const icon=document.querySelector('.icon img');
 //fill form according to wheater info
 const updateUI=(data)=>{
     const cityDetail=data.cityDetail;
@@ -16,7 +18,17 @@ const updateUI=(data)=>{
          </div>
 
     </div>`;
+    const iconSrc=`img/icons/${weatherInfo.WeatherIcon}.svg`;
+    icon.setAttribute('src',iconSrc);
+    // let timeSrc=null;
+    // if(weatherInfo.IsDayTime){
+    //     timeSrc="img/day.svg";
+    // }else{
+    //     timeSrc="img/night.svg";
+    // }
 
+    let timeSrc=weatherInfo.IsDayTime?'img/day.svg':'img/night.svg';
+    timeImage.setAttribute('src',timeSrc);
     if (card.classList.contains('d-none')){
         card.classList.remove('d-none');
     }
@@ -32,6 +44,7 @@ form.addEventListener('submit',(e)=>{
             
         });
     form.reset();
+
 });
 
 //get city info
@@ -43,3 +56,4 @@ const updateCity=async (city)=>{
         weatherInfo
     }
 };
+
