@@ -26,7 +26,8 @@ When user searches a city in the world, project displays current wheather inform
         |----weather-app.png
         |----img
         |----readme.md
-
+## Overview
+I mastered HTML, CSS and Javascript features in this project. You can see the visual representation of the wheather-app above.
 
 🔥 You can use [AccuWeather Api](https://developer.accuweather.com//) for your app.
 
