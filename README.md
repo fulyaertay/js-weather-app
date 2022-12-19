@@ -6,7 +6,7 @@
 
 ## Animation of the App
 
-![image](./wheater-app.gif)
+![image](./wheather-app.gif)
 
 ## Visulation of the App
 
